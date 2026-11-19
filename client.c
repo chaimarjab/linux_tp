@@ -4,7 +4,7 @@
 int main()
 {
     /* Déclarations */
-    int fd1, fd2, i, somme = 0;
+    int fd1, fd2, i;
     Question q;
     Reponse r;
 
@@ -62,12 +62,11 @@ int main()
     /* Traitement local de la réponse */
     printf("Client %d a reçu :", getpid());
 
-    for (i = 0; i < r.n; i++) {
+    for (i = 0; i < r.n; i++) 
         printf(" %d", r.tab[i]);
-        somme += r.tab[i];
-    }
+    
 
-    printf("\nSomme = %d\n", somme);
+    printf("\n");
 
     close(fd1);
     close(fd2);
